@@ -1,0 +1,31 @@
+import java.util.*;
+final int WHITE_COLOR=255,BALL_HEIGHT=10,BALL_WIDTH=10;
+class Ball{
+  int X,Y,sizeX,sizeY;
+  Ball(int Y){
+    this.Y=Y;
+    X=0;
+  }
+  void update(){
+    int moveBy=Y/100;
+    X+=moveBy;
+  }
+  void toDisplay(){
+    ellipse(X,Y,BALL_HEIGHT,BALL_WIDTH);
+  }
+}
+ArrayList<Ball> balls = new ArrayList();
+void setup(){
+  size(600,500);
+  background(WHITE_COLOR);
+  balls.add(new Ball(100));
+  balls.add(new Ball(200));
+  balls.add(new Ball(300));
+  balls.add(new Ball(400));
+}
+void draw(){
+  for(Ball ball:balls){
+    ball.update();
+    ball.toDisplay();
+  }
+}
