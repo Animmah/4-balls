@@ -1,0 +1,18 @@
+int ballOne=0,ballTwo=0,ballThree=0,ballFour=0;
+final int BALL_HEIGHT=10;
+final int BALL_WIDTH=10;
+void setup() {
+    size(600, 500);
+    background(255);
+}
+
+void draw() {
+    ballOne+=1;
+    ellipse(ballOne,100 , BALL_HEIGHT, BALL_WIDTH);
+    ballTwo+=2;
+    ellipse(ballTwo,200,BALL_HEIGHT,BALL_WIDTH);
+    ballThree+=3;
+    ellipse(ballThree,300,BALL_HEIGHT,BALL_WIDTH);
+    ballFour+=4;
+    ellipse(ballFour,400,BALL_HEIGHT,BALL_WIDTH);
+}
